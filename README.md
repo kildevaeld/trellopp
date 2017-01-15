@@ -6,6 +6,7 @@ c++11 wrapper for the Trello API
 ## Usage
 
 ```c++
+#include <iostream>
 #include <trello++/trello++.h>
 
 using trello::BoardFilter;
@@ -24,6 +25,10 @@ int main () {
   .with(BoardField::name | BoardField::shortUrl);
   
   auto boards = m.boards("me", o);
+
+  for (auto board: boards) {
+    std::cout << board << std::endl;
+  }
 
   return 0;
 }
