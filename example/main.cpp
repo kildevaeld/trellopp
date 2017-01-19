@@ -24,8 +24,6 @@ int main() {
 
   BoardOptions o;
 
-  // o /*.with(BoardFilter::all)*/.with(BoardField::name | BoardField::url);
-
   auto boards = m.boards("me", o);
 
   for (auto i : boards) {
